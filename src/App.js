@@ -22,8 +22,6 @@ function App() {
     <>
       <h1>React App</h1>
 
-<img src='/team.png'>
-</img>
       <CreateForm 
       editIndex={editIndex} input={input} todos={todos} 
       setTodos={setTodos} setEditIndex={setEditIndex} setInput={setInput}
