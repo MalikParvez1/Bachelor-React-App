@@ -87,6 +87,7 @@ li {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .create-button {
@@ -95,6 +96,7 @@ li {
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
+  font-size: 16px;
   cursor: pointer;
 }
 
