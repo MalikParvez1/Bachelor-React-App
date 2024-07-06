@@ -20,17 +20,20 @@ function App() {
 
   return (
     <>
-      <h1>React App</h1>
+      <div className="App">
+        <h1>React App</h1>
 
-      <CreateForm 
-      editIndex={editIndex} input={input} todos={todos} 
-      setTodos={setTodos} setEditIndex={setEditIndex} setInput={setInput}
-      />
+        <CreateForm
+          editIndex={editIndex} input={input} todos={todos}
+          setTodos={setTodos} setEditIndex={setEditIndex} setInput={setInput}
+        />
 
-      <TodoList 
-      todos={todos} setTodos={setTodos} 
-      setEditIndex={setEditIndex} setInput={setInput}
-      />
+        <TodoList
+          todos={todos} setTodos={setTodos}
+          setEditIndex={setEditIndex} setInput={setInput}
+        />
+      </div>
+
     </>
   );
 }
