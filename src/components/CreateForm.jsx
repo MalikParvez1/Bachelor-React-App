@@ -1,19 +1,24 @@
 import React from 'react';
 import '../styles/styles.css';
+import { addTodo, updateTodo } from '../indexedDB';
 
 const CreateForm = ({editIndex, input, todos, setTodos, setEditIndex, setInput}) => {
-
-
-  const createTodo = (e) => {
+  
+  const createTodo = async (e) => {
     e.preventDefault();
     if (input.trim() !== '') {
       if (editIndex !== null) {
         const updatedTodos = [...todos];
-        updatedTodos[editIndex] = { text: input };
+        const todoToUpdate = updatedTodos[editIndex];
+        todoToUpdate.text = input;
+        await updateTodo(todoToUpdate.id, todoToUpdate);
+        updatedTodos[editIndex] = todoToUpdate;
         setTodos(updatedTodos);
         setEditIndex(null);
       } else {
-        setTodos([...todos, { text: input }]);
+        const newTodo = { text: input };
+        const id = await addTodo(newTodo);
+        setTodos([...todos, { ...newTodo, id }]);
       }
       setInput('');
     }

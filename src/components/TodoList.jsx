@@ -1,11 +1,14 @@
 import React from 'react';
 import '../styles/styles.css';
+import { deleteTodos } from '../indexedDB';
 
 const TodoList = ({todos, setTodos, setEditIndex, setInput}) => {
 
-    const deleteTodo = (index) => {
+    const deleteTodo =  async (index) => {
+        const todoToDelete = todos[index];
+        await deleteTodos(todoToDelete.id);
         const updatedTodos = [...todos];
-        updatedTodos.splice(index, 1);
+        updatedTodos.splice(index, 1);    
         setTodos(updatedTodos);
       };
     
