@@ -20,7 +20,6 @@ function App() {
 
   return (
     <>
-      <div className="App">
         <h1>React App</h1>
 
         <CreateForm
@@ -32,8 +31,6 @@ function App() {
           todos={todos} setTodos={setTodos}
           setEditIndex={setEditIndex} setInput={setInput}
         />
-      </div>
-
     </>
   );
 }

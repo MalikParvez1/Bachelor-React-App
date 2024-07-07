@@ -28,8 +28,8 @@ const TodoList = ({todos, setTodos, setEditIndex, setInput}) => {
                 {todo.text}
               </div>
               <div className='list-action'>
-                <button className='edit-button' onClick={() => editTodo(index)}><i className='fa-solid fa-pen' style={{ color: 'white' }}></i></button>
-                <button className='delete-button' onClick={() => deleteTodo(index)}><i className='fa-solid fa-trash' style={{ color: 'white' }}></i></button>
+                 <button className='edit-button' onClick={() => editTodo(index)}>Edit</button>
+                 <button className='delete-button' onClick={() => deleteTodo(index)}>Delete</button>
               </div>
             </li>
           ))}

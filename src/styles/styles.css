@@ -4,7 +4,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 h1 {
@@ -30,17 +30,29 @@ li {
 }
 
 .edit-button {
-  background-color: #ffd700;
+  background-color: #edc900;
   border-radius: 5px;
   border: none;
   padding: 5px 10px 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #fbe14f;
 }
 
 .delete-button {
-  background-color: #dc143c;
+  background-color: #f81f4a;
   border-radius: 5px;
   border: none;
   padding: 5px 10px 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #b82442;
 }
 
 .list-container {
@@ -60,16 +72,16 @@ li {
   flex: 2;
   display: flex;
   align-items: center;
-  text-align: left;
-  /* word-wrap: break-word;   */
+  text-align: left; 
+  word-break: break-all;
 }
 
 .list-action {
-  flex: 0.5;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .create-form {
