@@ -1,6 +1,5 @@
 import React from 'react';
-import '../styles/styles.css';
-import { deleteTodos } from '../indexedDB';
+import { deleteTodos } from '../services/indexedDB';
 
 const TodoList = ({todos, setTodos, setEditIndex, setInput}) => {
 

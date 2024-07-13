@@ -1,6 +1,5 @@
 import React from 'react';
-import '../styles/styles.css';
-import { addTodo, updateTodo } from '../indexedDB';
+import { addTodo, updateTodo } from '../services/indexedDB';
 
 const CreateForm = ({editIndex, input, todos, setTodos, setEditIndex, setInput}) => {
   
